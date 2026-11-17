@@ -40,4 +40,3 @@ Set `CHAIN_MODE=rpc`, `CHAIN_ID`, `RPC_URL`, and `TOKEN_CONTRACT` before startin
 | `GET` | `/api/v1/transfers?address=0x...` | List all transfers or filter by sender/recipient |
 
 The concise behavioral specification is in [`docs/SPEC.md`](docs/SPEC.md).
-

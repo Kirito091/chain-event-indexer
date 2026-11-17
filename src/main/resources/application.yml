@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: chain-event-indexer
+  datasource:
+    url: jdbc:h2:file:./data/indexer;DB_CLOSE_ON_EXIT=FALSE;MODE=PostgreSQL
+    username: sa
+    password:
+  sql:
+    init:
+      mode: always
+
+chain:
+  mode: ${CHAIN_MODE:demo}
+  id: ${CHAIN_ID:11155111}
+  confirmations: ${CHAIN_CONFIRMATIONS:3}
+  rpc-url: ${RPC_URL:}
+  contract-address: ${TOKEN_CONTRACT:0x0000000000000000000000000000000000000001}
+
+indexer:
+  batch-size: ${INDEXER_BATCH_SIZE:100}
+
+server:
+  port: ${PORT:8080}
